@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>魔王になった元親友が俺にだけ殺意MAXなんだが！？</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="paper" data-font="mincho" class="ui">
+
+<header id="bar-top">
+  <button id="btn-toc" type="button">目次</button>
+  <span id="book-title"></span>
+  <button id="btn-set" type="button">設定</button>
+</header>
+
+<main id="stage">
+  <div id="book">
+    <div id="page"><div id="flow"></div></div>
+  </div>
+</main>
+
+<footer id="bar-bottom">
+  <span id="chap-name"></span>
+  <input id="slider" type="range" dir="rtl" min="0" max="0" value="0" aria-label="ページ">
+  <span id="pageno"></span>
+</footer>
+
+<aside id="toc" class="panel" hidden>
+  <div class="panel-head"><strong>目次</strong><button type="button" data-close>閉じる</button></div>
+  <ol id="toc-list"></ol>
+</aside>
+
+<aside id="settings" class="panel" hidden>
+  <div class="panel-head"><strong>設定</strong><button type="button" data-close>閉じる</button></div>
+  <div class="row"><span>文字サイズ</span>
+    <span><button type="button" id="fs-down">A−</button> <output id="fs-val"></output> <button type="button" id="fs-up">A＋</button></span></div>
+  <div class="row"><span>背景</span>
+    <span class="seg" id="seg-theme">
+      <button type="button" data-v="paper">白</button>
+      <button type="button" data-v="sepia">セピア</button>
+      <button type="button" data-v="night">黒</button>
+    </span></div>
+  <div class="row"><span>書体</span>
+    <span class="seg" id="seg-font">
+      <button type="button" data-v="mincho">明朝</button>
+      <button type="button" data-v="gothic">ゴシック</button>
+    </span></div>
+  <p class="help">画面の左側をタップで次のページ、右側をタップで前のページ、中央でメニューの表示切替。キーボードは ← で次、→ で前。</p>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>
